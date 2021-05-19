@@ -1,0 +1,64 @@
+.popup-with-gratitude {
+  position: fixed;
+  z-index: 2;
+  top: 14%;
+  left: calc(50% - ((100% - (#{$side-padding-mobile} * 2)) / 2));
+  width: calc(100% - (#{$side-padding-mobile} * 2));
+  min-width: calc(#{$mobile-width} - (#{$side-padding-mobile} * 2));
+  min-height: $popup-height-mobile;
+  padding: 40px 26px;
+  background-color: $light-lilac;
+  text-align: center;
+  font-size: 16px;
+  line-height: 23px;
+}
+
+.popup-with-gratitude__button-close {
+  top: 15px;
+  right: 15px;
+
+  background: transparent;
+}
+
+.popup-with-gratitude h3 {
+  margin: 0 0 25px;
+  font-size: 18px;
+  line-height: 25px;
+}
+
+.popup-with-gratitude p {
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .popup-with-gratitude {
+    left: calc(50% - ((100% - (#{$side-padding-tablet} * 2)) / 2));
+    width: calc(100% - (#{$side-padding-tablet} * 2));
+    min-height: $popup-height;
+    padding: 60px 126px;
+  }
+
+  .popup-with-gratitude__button-close {
+    top: 30px;
+    right: 30px;
+  }
+
+  .popup-with-gratitude h3 {
+    font-size: 22px;
+    line-height: 31px;
+  }
+}
+
+@media (min-width: $desktop-width-start) {
+  .popup-with-gratitude {
+    top: 31%;
+    left: calc(50% - (#{$popup-width-desktop} / 2));
+    width: $popup-width-desktop;
+    padding: 60px 67px;
+  }
+
+  .popup-with-gratitude__button-close {
+    top: 25px;
+    right: 25px;
+  }
+}

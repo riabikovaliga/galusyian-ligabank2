@@ -1,0 +1,30 @@
+// перемменные для цветов
+$dark-grey: #1f1e25;
+$grey: #707c87;
+$light-grey: #e0e0e0;
+$blue: #2c36f2;
+$dark-blue: #2028b6;
+$light-lilac: #f6f7ff;
+$outline-color: rgba(46, 136, 228, 0.52);
+
+//переменные для ширины экрана
+$not-desktop-width: 1045px;
+$desktop-width-start: 1024px;
+$desktop-width-end: 1366px;
+$tablet-width: 768px;
+$mobile-width: 320px;
+$mobile-width-only: 767px;
+$side-padding-mobile: 15px;
+$side-padding-tablet: 45px;
+$side-padding-desktop: 98px;
+
+//переменные для габаритов попапа
+
+$popup-width-desktop: 500px;
+$popup-height-mobile: 198px;
+$popup-height: 193px;
+
+//переменные для габаритов модального окна входа
+$modal-width-desktop: 544px;
+$modal-height-mobile: 455px;
+$modal-height: 493px;

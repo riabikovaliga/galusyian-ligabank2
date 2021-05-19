@@ -1,0 +1,63 @@
+@media (min-width: $desktop-width-start) {
+  .services-tabs__item {
+    width: 25%;
+    text-align: center;
+    padding: 38px 0 35px;
+    text-decoration: none;
+    @include font(18px, 21px, 500);
+
+    &--active {
+      background-color: $light-lilac;
+    }
+  }
+
+  .services-tabs__item span {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+    }
+  }
+
+  .services-tabs__item {
+    &--contributions span {
+      padding-left: 44px;
+      &::before {
+        width: 34px;
+        height: 33px;
+        top: -4px;
+        background-image: url("../../img/vault-icon.svg");
+      }
+    }
+
+    &--credits span {
+      padding-left: 44px;
+      &::before {
+        width: 34px;
+        height: 30px;
+        top: -4px;
+        background-image: url("../../img/cards-icon.svg");
+      }
+    }
+    &--insurance span {
+      padding-left: 38px;
+      &::before {
+        width: 28px;
+        height: 34px;
+        top: -7px;
+        background-image: url("../../img/security-icon.svg");
+      }
+    }
+    &--online-services span {
+      padding-left: 30px;
+      &::before {
+        width: 20px;
+        height: 34px;
+        top: -7px;
+        background-image: url("../../img/phone-icon.svg");
+      }
+    }
+  }
+}

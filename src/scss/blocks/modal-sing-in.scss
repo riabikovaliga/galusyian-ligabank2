@@ -1,0 +1,163 @@
+.modal-sing-in {
+  position: fixed;
+  z-index: 2;
+  left: calc(50% - ((100% - (#{$side-padding-mobile} * 2)) / 2));
+  width: calc(100% - (#{$side-padding-mobile} * 2));
+  min-width: calc(#{$mobile-width} - (#{$side-padding-mobile} * 2));
+  min-height: $modal-height-mobile;
+  padding: 43px 15px;
+  background-color: $light-lilac;
+  border: 4px solid $blue;
+}
+
+.modal-sing-in .logo__icon {
+  width: 30px;
+  height: 27px;
+  margin: 0;
+}
+
+.modal-sing-in__form {
+  display: flex;
+  flex-direction: column;
+}
+
+.modal-sing-in .logo__wrapper {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: flex-start;
+  top: 2px;
+}
+
+.modal-sing-in .logo__name {
+  width: 119px;
+  height: 15px;
+}
+
+.modal-sing-in .logo__label {
+  display: block;
+  @include font(12px, 14px);
+  padding-left: 5px;
+}
+
+.modal-sing-in__button-close {
+  top: 45px;
+  right: 13px;
+}
+
+.modal-sing-in__wrapper {
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  &:first-child {
+    margin-top: 32px;
+    margin-bottom: 21px;
+  }
+  &:nth-child(2) {
+    margin-bottom: 30px;
+  }
+}
+
+.modal-sing-in__show-hide-button + label {
+  position: absolute;
+  top: 40px;
+  right: 10px;
+  display: block;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 9px;
+    right: 8px;
+
+    width: 22px;
+    height: 12px;
+    background-image: url("../../img/closed-eye.svg");
+  }
+}
+
+.modal-sing-in__show-hide-button:focus + label {
+  outline: 1px solid $outline-color;
+}
+
+.modal-sing-in__wrapper label:first-child {
+  padding-bottom: 6px;
+}
+
+.modal-sing-in__button {
+  width: 100%;
+  padding: 16px;
+}
+
+.modal-sing-in__restore-password {
+  text-decoration: none;
+  color: $grey;
+  align-self: center;
+}
+
+@media (max-width: $mobile-width-only) {
+  .modal-sing-in__restore-password {
+    order: 4;
+    margin-top: 11px;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .modal-sing-in {
+    left: calc(50% - ((100% - (#{$side-padding-tablet} * 2)) / 2));
+    width: calc(100% - (#{$side-padding-tablet} * 2));
+    min-height: $modal-height;
+    padding: 55px 84px;
+  }
+
+  .modal-sing-in__button-close {
+    top: 57px;
+    right: 81px;
+  }
+
+  .modal-sing-in__wrapper {
+    &:first-child {
+      margin-top: 39px;
+      margin-bottom: 25px;
+    }
+    &:nth-child(2) {
+      margin-bottom: 10px;
+    }
+  }
+
+  .modal-sing-in__show-hide-button + label {
+    right: 16px;
+  }
+
+  .modal-sing-in__restore-password {
+    align-self: flex-end;
+    margin-bottom: 22px;
+    @include font(12px, 17px);
+  }
+
+  .modal-sing-in__button {
+    padding: 17px;
+  }
+}
+
+@media (min-width: $desktop-width-start) {
+  .modal-sing-in {
+    left: calc(50% - (#{$modal-width-desktop} / 2));
+    width: $modal-width-desktop;
+    padding: 54px 56px;
+  }
+
+  .modal-sing-in__button-close {
+    top: 54px;
+    right: 53px;
+  }
+
+  .modal-sing-in__wrapper:first-child {
+    margin-top: 37px;
+    margin-bottom: 21px;
+  }
+}

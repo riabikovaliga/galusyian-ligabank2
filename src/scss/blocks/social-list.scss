@@ -1,0 +1,14 @@
+.social-list {
+  display: flex;
+  @include list-reset();
+}
+
+.social-list__item:not(:last-child) {
+  margin-right: 20px;
+}
+
+@media (min-width: $desktop-width-start) {
+  .social-list__item:not(:last-child) {
+    margin-right: 15px;
+  }
+}

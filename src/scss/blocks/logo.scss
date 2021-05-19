@@ -1,0 +1,50 @@
+.logo__link {
+  display: flex;
+  align-items: flex-end;
+  text-decoration: none;
+  height: min-content;
+}
+
+.logo__wrapper {
+  display: flex;
+  align-items: flex-end;
+}
+
+.logo__name {
+  width: 107px;
+  height: 13px;
+}
+
+.logo__label {
+  display: none;
+}
+
+@media (min-width: $tablet-width) {
+  .logo__icon {
+    width: 24px;
+    height: 22px;
+  }
+
+  .logo__name {
+    width: 116px;
+    height: 15px;
+  }
+}
+
+@media (min-width: $desktop-width-start) {
+  .logo__icon {
+    width: 28px;
+    height: 27px;
+    margin-right: 9px;
+    margin-bottom: 9px;
+  }
+
+  .logo__name {
+    width: 112px;
+    height: 26px;
+  }
+
+  .logo__wrapper {
+    display: block;
+  }
+}

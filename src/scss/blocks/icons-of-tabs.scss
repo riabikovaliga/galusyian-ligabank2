@@ -1,0 +1,45 @@
+.icons-of-tabs {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.icons-of-tabs__item {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: $dark-blue;
+
+  &:not(:last-child) {
+    margin-right: 6px;
+  }
+
+  &--active {
+    background-color: $light-grey;
+  }
+}
+
+.icons-of-tabs--slider .icons-of-tabs__item--active {
+  &:nth-child(-n + 2) {
+    background-color: $light-lilac;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .icons-of-tabs__item {
+    width: 8px;
+    height: 8px;
+
+    &:not(:last-child) {
+      margin-right: 8px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width-start) {
+  .icons-of-tabs {
+    &--services {
+      display: none;
+    }
+  }
+}

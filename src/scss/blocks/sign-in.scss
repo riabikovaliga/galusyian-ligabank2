@@ -1,0 +1,44 @@
+.sing-in__link {
+  display: flex;
+  align-items: center;
+
+  color: $dark-grey;
+  text-decoration: none;
+}
+
+.sing-in__icon {
+  margin: 0;
+  width: 14px;
+  height: 16px;
+}
+
+@media (min-width: $tablet-width) {
+  .sing-in__icon {
+    width: 20px;
+    height: 22px;
+  }
+}
+
+@media (min-width: $desktop-width-start) {
+  .sing-in__title {
+    @include font(16px, 19px);
+  }
+  .sing-in__icon {
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: $not-desktop-width) {
+  .sing-in__title {
+    display: none;
+  }
+  .sing-in--open-menu .sing-in__title {
+    display: block;
+    margin-left: 10px;
+  }
+
+  .sing-in--open-menu .sing-in__icon {
+    width: 20px;
+    height: 20px;
+  }
+}

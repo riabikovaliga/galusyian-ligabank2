@@ -1,0 +1,57 @@
+.button {
+  @include font(14px, 16.41px, 500, $light-lilac);
+  background-color: $blue;
+  border-radius: 4px;
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.button-close {
+  position: absolute;
+  width: 19px;
+  height: 19px;
+
+  background: transparent;
+  border: none;
+  cursor: pointer;
+
+  &:before {
+    content: "";
+    border-top: 1px solid $dark-grey;
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 100%;
+    transform: rotate(45deg);
+  }
+
+  &::after {
+    content: "";
+    border-bottom: 1px solid $dark-grey;
+    position: absolute;
+    top: 6px;
+    left: 0;
+    width: 100%;
+
+    transform: rotate(-45deg);
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .button {
+    @include font(16px, 18.75px, 500, $light-lilac);
+  }
+  .button-close {
+    width: 24px;
+    height: 24px;
+
+    &:before {
+      top: 7px;
+    }
+
+    &::after {
+      top: 7px;
+    }
+  }
+}

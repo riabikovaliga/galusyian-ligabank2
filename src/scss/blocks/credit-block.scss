@@ -1,0 +1,32 @@
+.credit-block {
+  min-width: $mobile-width;
+  max-width: $desktop-width-end;
+  width: 100%;
+  margin: 0 auto;
+  padding: 54px $side-padding-mobile 0;
+}
+
+.credit-block__title {
+  @include font(22px, 31px, 700);
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .credit-block {
+    padding: 69px $side-padding-tablet 0;
+  }
+
+  .credit-block__title {
+    @include font(32px, 45px, 700);
+  }
+}
+
+@media (min-width: $desktop-width-start) {
+  .credit-block {
+    padding: 97px $side-padding-desktop 0;
+  }
+
+  .credit-block__title {
+    @include font(41px, 57.5px, 700);
+  }
+}

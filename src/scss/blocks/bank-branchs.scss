@@ -1,0 +1,59 @@
+.bank-branchs {
+  min-width: $mobile-width;
+  max-width: $desktop-width-end;
+  width: 100%;
+  margin: 0 auto;
+  padding: 30px 0 61px;
+}
+
+.bank-branchs h2 {
+  padding: 0 $side-padding-mobile;
+  margin-bottom: 27px;
+}
+
+.bank-branchs__map {
+  height: 381px;
+  width: 100%;
+}
+
+.bank-branchs__map-marker {
+  position: relative;
+  width: 29px;
+  height: 33px;
+  top: -33px;
+  left: -14.5px;
+  background-repeat: no-repeat;
+  background-image: url(../../img/location-icon.svg);
+}
+
+@media (min-width: $tablet-width) {
+  .bank-branchs {
+    padding: 34px $side-padding-tablet 81px;
+  }
+
+  .bank-branchs h2 {
+    padding: 0;
+    margin-bottom: 33px;
+  }
+
+  .bank-branchs__map {
+    height: 462px;
+  }
+
+  .bank-branchs__map-marker {
+    width: 35px;
+    height: 40px;
+    top: -40px;
+    left: -17.5px;
+    background-size: contain;
+  }
+}
+
+@media (min-width: $desktop-width-start) {
+  .bank-branchs {
+    padding: 63px $side-padding-desktop 111px;
+  }
+  .bank-branchs h2 {
+    margin-bottom: 55px;
+  }
+}

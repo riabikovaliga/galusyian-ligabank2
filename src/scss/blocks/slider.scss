@@ -1,0 +1,252 @@
+.slider {
+  min-width: $mobile-width;
+  margin: 0 auto;
+  width: 100%;
+
+  &--first {
+    background-color: $blue;
+  }
+
+  &--second {
+    background: linear-gradient(90deg, #dde2ec, #dde2ec),
+      linear-gradient(180deg, #f2f6ff, #eff9ff94);
+    background-repeat: no-repeat;
+    background-size: 60% 100%, 50% 100%;
+    background-position: left bottom, right bottom;
+  }
+
+  &--third {
+    background-color: #ccdff76e;
+  }
+}
+
+.slider__wrapper {
+  position: relative;
+  min-width: $mobile-width;
+  max-width: $desktop-width-end;
+  width: 100%;
+  height: max-content;
+  margin: 0 auto;
+  padding-bottom: 10px;
+
+  background-repeat: no-repeat;
+  background-position: 100% 59%;
+
+  &--first {
+    background-image: url("../../img/black-card-phone.png");
+  }
+
+  &--second {
+    background-image: url("../../img/slide-2-phone.jpg");
+  }
+
+  &--third {
+    background-image: url("../../img/slide-3-phone.jpg");
+  }
+}
+
+.slider__content {
+  width: max-content;
+  min-height: 178px;
+  padding-top: 38px;
+  padding-left: 5%;
+  margin-bottom: 32px;
+}
+
+.slider__title {
+  margin: 0 0 7px 0;
+  @include font(38px, 45px, 700);
+
+  &--first {
+    color: $light-lilac;
+  }
+}
+
+.slider__text {
+  margin: 0 0 37px 0;
+  @include font(16px, 19px);
+
+  &--first {
+    color: $light-lilac;
+    margin-bottom: 38px;
+  }
+
+  &--second {
+    max-width: 152px;
+  }
+}
+
+.slider__button {
+  padding: 12px 30px;
+
+  &--third {
+    padding: 12px 37px 13px;
+  }
+}
+
+.slider__checkbox {
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  width: 30px;
+}
+
+.slider__checkbox-item {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: $dark-blue;
+
+  &--active-third {
+    background-color: $light-grey;
+  }
+
+  &--active {
+    background-color: $light-lilac;
+  }
+}
+
+.slider__button--first {
+  background-color: $light-lilac;
+  color: $dark-grey;
+}
+
+@media (min-width: $tablet-width) {
+  .slider--first {
+    background: linear-gradient(
+        183.47deg,
+        rgba(56, 65, 255, 0) 27.26%,
+        #3841ff 97.14%
+      ),
+      linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027b3 99.79%),
+      $blue;
+    background-repeat: no-repeat;
+    background-size: 23.3% 199px, 17.3% 100%;
+    background-position: 77.5% bottom, right bottom;
+  }
+
+  .slider__wrapper {
+    padding-bottom: 15px;
+    &--first {
+      background: url("../../img/black-card-tablet.png"),
+        url("../../img/white-card-tablet.png");
+      background-repeat: no-repeat;
+      background-position: 70% 72%, 87% 33%;
+    }
+
+    &--second {
+      background-image: url("../../img/slide-2-tablet.jpg");
+    }
+
+    &--third {
+      background-image: url("../../img/slide-3-tablet.jpg");
+    }
+  }
+
+  .slider__content {
+    min-height: 224px;
+    padding-left: 86px;
+    padding-top: 70px;
+    margin-bottom: 53px;
+  }
+
+  .slider__checkbox {
+    width: 40px;
+  }
+
+  .slider__title {
+    margin: 0 0 11px 0;
+    font-size: 46px;
+    line-height: 44px;
+  }
+
+  .slider__text {
+    margin: 0 0 43px 0;
+    font-size: 18px;
+    line-height: 21px;
+
+    &--second {
+      max-width: max-content;
+    }
+  }
+
+  .slider__button {
+    padding: 14px 31px;
+
+    &--third {
+      padding: 14px 38px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width-start) {
+  .slider--first {
+    background: linear-gradient(
+        180.24deg,
+        rgba(32, 39, 179, 0) 32.89%,
+        #2027b3 99.79%
+      ),
+      linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841ff 97.14%),
+      linear-gradient(183.47deg, rgba(56, 65, 255, 0) 27.26%, #3841ff 97.14%),
+      linear-gradient(180.24deg, rgba(32, 39, 179, 0) 32.89%, #2027b3 99.79%),
+      $blue;
+    background-repeat: no-repeat;
+    background-size: 11% 100%, 11% 269px, 19.8% 269px, 21.7% 100%;
+    background-position: left bottom, 11% bottom, 73% bottom, right bottom;
+  }
+
+  .slider__wrapper {
+    background-position: 68% 69%, 78% 35%;
+    &--first {
+      background-image: url("../../img/black-card.png"),
+        url("../../img/white-card.png");
+    }
+
+    &--second {
+      background-image: url("../../img/slide-2.jpg");
+    }
+
+    &--third {
+      background-image: url("../../img/slide-3.jpg");
+    }
+  }
+
+  .slider__content {
+    padding-left: 15%;
+  }
+
+  .slider__title {
+    font-size: 54px;
+    line-height: 64px;
+    margin-bottom: 7px;
+  }
+
+  .slider__text {
+    margin: 0 0 48px 0;
+    font-size: 22px;
+    line-height: 26px;
+  }
+
+  .slider__button {
+    font-size: 18px;
+    line-height: 21px;
+    padding: 14px 36px 17px;
+
+    &--third {
+      padding: 15px 50px 16px 47px;
+    }
+  }
+}
+
+@media (min-width: $desktop-width-end) {
+  .slider__wrapper {
+    padding-bottom: 40px;
+  }
+
+  .slider__content {
+    min-height: 286px;
+    padding-top: 102px;
+    padding-left: 268px;
+    margin-bottom: 66px;
+  }
+}

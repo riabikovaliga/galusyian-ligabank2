@@ -1,0 +1,25 @@
+.page-content {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.page-content h2 {
+  @include font(22px, 30px, 700);
+  padding-bottom: 21px;
+  margin: 0;
+}
+
+@media (min-width: $tablet-width) {
+  .page-content h2 {
+    @include font(32px, 45px, 700);
+    padding-bottom: 28px;
+  }
+}
+
+@media (min-width: $desktop-width-start) {
+  .page-content h2 {
+    @include font(41px, 57.5px, 700);
+    padding-bottom: 49px;
+  }
+}

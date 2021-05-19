@@ -1,0 +1,42 @@
+.input {
+  width: 100%;
+  border: 1px solid $dark-grey;
+  height: 60px;
+  border-radius: 4px;
+  @include font(16px, 23px, 500);
+  text-align: center;
+  background-color: transparent;
+
+  &--price {
+    border: none;
+    width: 80%;
+    height: auto;
+    text-align: center;
+    @include font(16px, 23px, 500);
+  }
+
+  &--tel,
+  &--email {
+    margin-top: 20px;
+  }
+
+  &:focus {
+    outline: 1px solid $outline-color;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .input {
+    &--tel,
+    &--email {
+      margin-top: 30px;
+      width: 47.6%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width-start) {
+  .input {
+    @include font(18px, 25px, 500);
+  }
+}
